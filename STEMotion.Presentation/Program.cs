@@ -31,14 +31,5 @@ var app = builder.Build();
 app.UseInfrastructure();
 app.ApplyMigrations();
 
-
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API v1");
-});
-
-
 app.UseCors("AllowReactApp");
-
 app.Run();
