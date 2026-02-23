@@ -31,6 +31,12 @@ var app = builder.Build();
 app.UseInfrastructure();
 app.ApplyMigrations();
 
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 app.UseCors("AllowReactApp");
 
 app.Run();
