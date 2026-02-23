@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:5175", "http://localhost:5174", "http://localhost:5173", "https://payment-testing-fe.vercel.app", "https://fe-ste-motion.vercel.app", "https://fe-ste-motion.vercel.app")
+            policy.WithOrigins("http://localhost:5175", "http://localhost:5174", "http://localhost:5173", "https://payment-testing-fe.vercel.app", "https://fe-ste-motion.vercel.app", "https://fe-ste-motion.vercel.app", "https://stemotion-fe-dep.vercel.app", "https://stemotion-fe-dep-git-main-verceltest1s-projects-a7be27d7.vercel.app/")
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials();
