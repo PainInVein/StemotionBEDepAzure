@@ -31,7 +31,7 @@ var app = builder.Build();
 app.UseInfrastructure();
 app.ApplyMigrations();
 
-if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
