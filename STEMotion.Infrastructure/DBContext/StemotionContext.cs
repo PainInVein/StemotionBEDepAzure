@@ -36,25 +36,25 @@ public partial class StemotionContext : DbContext
     public DbSet<Game> Games { get; set; }
     public DbSet<GameResult> GameResults { get; set; }
     public DbSet<StudentProgress> StudentProgress { get; set; }
-    public static string GetConnectionString(string connectionStringName)
-    {
-        var config = new ConfigurationBuilder()
-            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-            .AddJsonFile("appsettings.json")
-            .Build();
+    //public static string GetConnectionString(string connectionStringName)
+    //{
+    //    var config = new ConfigurationBuilder()
+    //        .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+    //        .AddJsonFile("appsettings.json")
+    //        .Build();
 
-        string connectionString = config.GetConnectionString(connectionStringName);
-        return connectionString;
-    }
+    //    string connectionString = config.GetConnectionString(connectionStringName);
+    //    return connectionString;
+    //}
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection"))
-                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-        }
-    }
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    if (!optionsBuilder.IsConfigured)
+    //    {
+    //        optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection"))
+    //            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    //    }
+    //}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
