@@ -1,0 +1,6 @@
+@STEMotion.Presentation_HostAddress = http://localhost:5049
+
+GET {{STEMotion.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

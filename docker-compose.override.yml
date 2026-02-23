@@ -1,0 +1,17 @@
+# version: '3.8'
+services:
+  sqlserverdb:
+    container_name: sqlserverdb
+    environment:
+        SA_PASSWORD: "Passw0rd!"
+        ACCEPT_EULA: "Y"
+    restart: always
+    volumes:
+        - sqlserver_data:/var/lib/sqlserver/data
+    ports:
+        - "1440:1433"
+  redis:
+    container_name: redis-stemotion
+    restart: always
+    ports:
+      - "6789:6379"

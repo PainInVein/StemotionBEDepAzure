@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 0 auto; border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
+        <div style="text-align: center; border-bottom: 2px solid #007bff; padding-bottom: 10px;">
+            <h1 style="color: #007bff; margin: 0;">STEMotion Verification</h1>
+        </div>
+        <div style="padding: 20px 0;">
+            <p>Chào <strong>{{UserName}}</strong>,</p>
+            <p>Mã xác thực (OTP) của bạn là:</p>
+            <div style="text-align: center; margin: 30px 0;">
+                <span style="font-size: 32px; font-weight: bold; letter-spacing: 5px; color: #d9534f; background: #f9f9f9; padding: 10px 20px; border: 1px dashed #d9534f; border-radius: 5px;">
+                    {{OTP_CODE}}
+                </span>
+            </div>
+            <p>Mã này có hiệu lực trong <strong>{{ExpireMinutes}} phút</strong>. Vui lòng không cung cấp mã này cho bất kỳ ai khác.</p>
+        </div>
+        <div style="font-size: 12px; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 10px;">
+            Đây là email tự động từ hệ thống STEMotion, vui lòng không phản hồi email này.
+        </div>
+    </div>
+</body>
+</html>
