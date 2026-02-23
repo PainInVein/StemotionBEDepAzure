@@ -33,7 +33,10 @@ app.ApplyMigrations();
 
 
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API v1");
+});
 
 
 app.UseCors("AllowReactApp");
