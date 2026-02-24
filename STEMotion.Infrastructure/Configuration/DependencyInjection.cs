@@ -116,9 +116,19 @@ namespace STEMotion.Infrastructure.Configuration
             {
                 throw new ArgumentNullException("Redis Connection string is not configured");
             }
+
+            var redisPassword = configuration.GetSection("CacheSettings:Password").Value;
+
             services.AddStackExchangeRedisCache(options =>
             {
-                options.Configuration = redisConnectionString;
+                options.ConfigurationOptions = new StackExchange.Redis.ConfigurationOptions
+                {
+                    EndPoints = { redisConnectionString },
+                    User = "default",
+                    Password = redisPassword,
+                    Ssl = true,
+                    AbortOnConnectFail = false
+                };
             });
         }
     }
